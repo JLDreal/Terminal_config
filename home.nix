@@ -15,12 +15,14 @@
     starship
     nano
   ];
+
+programs.bash.bashrcExtra = ''
+    eval "$(starship init bash)"
+  '';
 	
     programs.starship = {
       enable = true;
-      programs.bash.bashrcExtra = ''
-    eval "$(starship init bash)"
-  '';
+   
       settings = {
         # Core Formatting
         add_newline = false;
